@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Aniroop Naladala</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Default (Light Mode) Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(to right, #e66465, #9198e5);
+            color: #333;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+            color: #f5f5f5;
+        }
+
+        /* Dark Mode Toggle Button Styles */
+        .dark-mode-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #f5f5f5;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .dark-mode .dark-mode-toggle {
+            background-color: #333;
+            color: #f5f5f5;
+        }
+
+
+		/* Headings in Light Mode */
+h1, h2, h3, h4, h5, h6 {
+    color: #222;
+}
+
+/* Headings in Dark Mode */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #ffffff;
+}
+
+/* Links in Light Mode */
+a {
+    color: #1a0dab;
+}
+
+/* Links in Dark Mode */
+body.dark-mode a {
+    color: #8ab4f8;
+}
+
+/* Other elements (buttons, borders, etc.) */
+button, .dark-mode-toggle {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+body.dark-mode button,
+body.dark-mode .dark-mode-toggle {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+/* Additional content styling */
+p, li, span, div {
+    transition: color 0.3s, background-color 0.3s;
+}
+
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode span,
+body.dark-mode div {
+    color: #e0e0e0;
+}
+    </style>
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <!-- Dark Mode Toggle Button -->
+        <button id="dark-mode-toggle" class="dark-mode-toggle">Dark Mode</button>
+
+        <!-- Main Content -->
+        <div id="main">
+            <!-- Your existing HTML content goes here -->
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <!-- Footer content -->
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+
+        // Check local storage for theme preference
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            body.classList.add(currentTheme);
+            toggleButton.textContent = currentTheme === 'dark-mode' ? 'Light Mode' : 'Dark Mode';
+        }
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            let theme = 'light-mode';
+            if (body.classList.contains('dark-mode')) {
+                theme = 'dark-mode';
+                toggleButton.textContent = 'Light Mode';
+            } else {
+                toggleButton.textContent = 'Dark Mode';
+            }
+            localStorage.setItem('theme', theme);
+        });
+    </script>
+</body>
+</html>
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="#intro" class="active">Introduction</a></li>
+                <li><a href="#first">First Section</a></li>
+                <li><a href="#second">Second Section</a></li>
+                <li><a href="#cta">Get Started</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Introduction -->
+            <section id="intro" class="main">
+                <div class="spotlight">
+                    <div class="content">
+                        <header class="major">
+                            <h2>Aniroop Naladala</h2>
+                        </header>
+                        <p>Hello! I'm Aniroop Naladala, a computer science major at Iowa State University, expected to graduate in May 2026. 
+                           Currently, I serve as an ISU Honors Leader, facilitating first-year seminar sections and mentoring students.
+                           I also work at ISU Dining and am involved in research focusing on genomics and protein function annotation.</p>
+                        <ul class="actions">
+                            <li><a href="generic.html" class="button">Learn More</a></li>
+                        </ul>
+                    </div>
+                    <span class="image"><img src="images/IMG_6938.jpg" alt="" /></span>
+                </div>
+            </section>
+
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2>Career Horizons</h2>
+								</header>
+								<ul class="features">
+									<li>
+										<span class="icon solid major style1 fa-id-card"></span>
+										<h3>ISU Dining Employee</h3>
+										<p></p>
+									</li>
+									<li>
+										<span class="icon solid major fas fa-book-reader"></span>
+										<h3>Research</h3>
+										<p></p>
+									</li>
+									<li>
+										<span class="icon solid major style5 fas fa-users"></span>
+										<h3>Honors Leader</h3>
+										<p></p>
+									</li>
+								</ul>
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="first-section.html" class="button">Learn More</a></li>
+									</ul>
+								</footer>
+							</section>
+
+						<!-- Second Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<h2>First Fellowship</h2>
+                                    <img src="images/unnamed.jpg" alt="Fellowship Image" style="width:100%; max-width:600px; height:auto; margin:20px 0;">
+									<p>I'm excited to announce that I've started my first fellowship with Headstarter AI, a leading organization in artificial intelligence innovation. This fellowship offers me a unique opportunity to dive deep into the world of AI, work on cutting-edge projects, and collaborate with some of the brightest minds in the industry. Over the coming months, I'll be focusing on developing advanced AI models, exploring new machine learning techniques, and contributing to impactful projects that have real-world applications. This experience will not only enhance my technical skills but also provide valuable insights into the rapidly evolving field of artificial intelligence.</p>
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="second-section.html" class="button">Learn More</a></li>
+									</ul>
+								</footer>
+							</section>
+
+						<!-- Get Started -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>Let's Collaborate</h2>
+									<p>I'm excited to connect with like-minded individuals and professionals! Whether you have a question, want to collaborate, or just want to say hi, I'm here to chat. Feel free to reach out, and I'll get back to you as soon as I can.</p>
+        <p>Looking forward to connecting!</p>
+								</header>
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="get-started.html" class="button primary">Get Started</a></li>
+									</ul>
+								</footer>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<h2></h2>
+						<p></p>
+					</section>
+					<section>
+						<h2>Personal Information</h2>
+						<dl class="alt">
+							<dt>Phone</dt>
+							<dd>314-359-3399</dd>
+							<dt>Email</dt>
+							<dd><a href="mailto:aniroopnaladala37@gmail.com">aniroopnaladala37@gmail.com</a></dd>
+						</dl>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/aniroop-naladala-349738272/" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</section>
+					<p class="copyright">&copy; 2024 Aniroop Naladala</a>.</p>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
